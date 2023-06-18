@@ -1,0 +1,71 @@
+{
+  "fields": [
+    {
+      "icon": "input",
+      "name": "Input",
+      "type": "input",
+      "nodeType": "BASE_NODE",
+      "description": "Basic input field to collect custom input like email, text and passwords",
+      "properties": {
+        "type": {
+          "type": "select",
+          "options": ["email", "text", "password", "phone", "number"],
+          "required": true
+        },
+        "validation": {
+          "length": {
+            "min": {
+              "type": "number"
+            },
+            "max": {
+              "type": "number"
+            }
+          }
+        },
+        "prefix": {
+          "icon": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          }
+        },
+        "placeholder": {
+          "type": "string",
+          "required": true
+        },
+        "label": {
+          "type": "string",
+          "required": true
+        }
+      }
+    },
+    {
+      "type": "radio",
+      "icon": "radio",
+      "name": "Radio",
+      "nodeType": "BASE_NODE",
+      "description": "A choice based field to collect data",
+      "properties": {
+        "label": {
+          "type": "string",
+          "required": true
+        },
+        "value": "string"
+      }
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "nodeType": "BASE_NODE",
+      "description": "Useful to do some actions when clicked",
+      "properties": {
+        "click": "action",
+        "action": {
+          "type": "select",
+          "options": ["API", "SUBMIT", "FLOW_UPDATE"]
+        }
+      }
+    }
+  ]
+}
